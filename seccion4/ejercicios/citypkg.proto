@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package address;
+
+message City {
+  string name = 1;
+  string zip_code = 2;
+  string contry_name = 3;
+}

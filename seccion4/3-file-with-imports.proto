@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+import "seccion4/3-date.proto";
+
+/* Perso is used to identified users
+ * across our system */
+message Person {
+  int32 age = 1;
+  string first_name = 2;
+  string last_name = 3;    // last name as docuemnted in the signup
+  bytes small_picture = 4; // small picture represents a small .jpg file
+  bool is_profile_verified = 5;
+  float height = 6;
+
+  repeated string phone_numbers = 7;
+
+  // we currently consider only 3 ey colours
+  enum EyeColour {
+    UNKNOWN_EYE_COLOUR = 0;
+    EYE_GREE = 1;
+    EYE_BROWN = 2;
+    EYE_BLUE = 3;
+  }
+  EyeColour eye_colour = 8;
+
+  Date birthday = 9;
+
+  // we dife type Adreess whithin Person (Person.Address)
+  message Address {
+    string address_line_1 = 1;
+    string address_line_2 = 2;
+    string zip_code = 3;
+    string city = 4;
+    string country = 5;
+  }
+
+  repeated Address addresses = 10;
+}
