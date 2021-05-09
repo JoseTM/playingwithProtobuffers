@@ -8,7 +8,6 @@ import (
 
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
-	"pecera.org/complexjosepb"
 	"pecera.org/enumjosepb"
 	"pecera.org/simplejosepb"
 )
@@ -112,8 +111,8 @@ func getEnum() {
 	fmt.Println(enum)
 }
 
-func complexMatters() {
+/* func complexMatters() {
 	complex := complexjosepb.ComplexMessage{}
 	dummy := complexjosepb.DummyMessage{}
 
-}
+} */
